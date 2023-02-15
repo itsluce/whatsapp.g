@@ -2,7 +2,6 @@ import styled from "styled-components";
 import { Avatar, IconButton, Button } from "@mui/material";
 import ChatIcon from "@mui/icons-material/Chat";
 import MoreVertIcon from "@mui/icons-material/MoreVert";
-import SearchIcon from "@mui/icons-material/Search";
 import * as EmailValidator from "email-validator";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useCollection } from "react-firebase-hooks/firestore";
@@ -16,7 +15,7 @@ function Sidebar() {
   const [user] = useAuthState(auth);
   const userChatRef = query(
     collection(db, "chats"),
-    where("users", "array-contains", user.phoneNumber)
+    where("users", "array-contains", user.email)
   );
   const [chatsSnapshot] = useCollection(userChatRef);
 
@@ -30,13 +29,13 @@ function Sidebar() {
     }
 
     if (
-      // EmailValidator.validate(input) &&
+      EmailValidator.validate(input) &&
       !chatAlreadyExists(input) &&
-      input !== user.phoneNumber
+      input !== user.email
     ) {
       const col = collection(db, "chats");
       addDoc(col, {
-        users: [user.phoneNumber, input],
+        users: [user.email, input],
       });
     }
   };

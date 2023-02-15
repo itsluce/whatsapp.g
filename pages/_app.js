@@ -17,7 +17,7 @@ function MyApp({ Component, pageProps }) {
       setDoc(
         document,
         {
-          phoneNumber: user.phoneNumber,
+          email: user.email,
           lastSeen: Timestamp.now(),
           photoURL: user.photoURL,
         },

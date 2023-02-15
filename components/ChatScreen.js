@@ -81,7 +81,7 @@ function Chatscreen({ chat, messages }) {
     addDoc(colRef, {
       timestamp: Timestamp.now(),
       message: input,
-      user: user.phoneNumber,
+      user: user.email,
       photoURL: user.photoURL,
     });
 
