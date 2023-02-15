@@ -54,3 +54,4 @@ const Timestamp = styled.span`
   text-align: right;
   right: 0;
 `;
+
