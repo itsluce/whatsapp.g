@@ -1,0 +1,47 @@
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background-color: #111b21 !important;
+  color: #d1d7db;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+:root {
+  --primaryColor: #005c4b;
+  --secondaryColor: #202c33;
+  --primaryFontColor: #d1d7db;
+}
+.searchIcon {
+  color: var(--primaryFontColor);
+  position: relative;
+  left: 10%;
+  top: 0;
+}
+
+.newChatButton {
+  background-color: var(--primaryFontColor);
+  border: none;
+  cursor: pointer;
+  color: var(--secondaryColor);
+  outline: none;
+  padding: 0.5rem 2rem;
+  border-radius: 0.3rem;
+  transition: 0.4s all;
+}
+.newChatButton:hover {
+  background-color: #636567;
+  color: #f7f7f7;
+}
+.icons {
+  color: #d1d7db;
+}
