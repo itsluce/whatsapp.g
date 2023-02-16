@@ -21,7 +21,7 @@ function Sidebar() {
 
   const createChat = () => {
     const input = prompt(
-      "Please enter a phone number for the user you wish to chat with:"
+           "Please enter a Gmail for the user you want to chat with:"
     );
 
     if (!input) {
