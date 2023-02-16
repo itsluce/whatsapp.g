@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import Head from "next/head";
 import { Button } from "@mui/material";
+import { FcGoogle } from "react-icons/fc";
 import {
   RecaptchaVerifier,
   signInWithPhoneNumber,
@@ -94,9 +95,16 @@ function Login() {
 
       <LoginContainer>
         <Logo src={whatsappLogo} />
-        <Button onClick={signIn} variant="outlined">
-          Sign in with Google
-        </Button>
+        <div
+          onClick={signIn}
+          className="googleButtonContainer"
+          style={{ marginTop: "1rem" }}
+        >
+          <FcGoogle size={50} className="googleIcon" />
+          <button type={"button"} className="googleButton" align="center">
+            sign in with Google
+          </button>
+        </div>
       </LoginContainer>
     </Container>
   );
