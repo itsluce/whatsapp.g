@@ -45,3 +45,28 @@ a {
 .icons {
   color: #d1d7db;
 }
+.googleButtonContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.googleButton {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #fff;
+  background-color: #339af0;
+  box-shadow: 0 0 4rem 1.5rem rgba(0, 0, 0, 0.1);
+  border: none;
+  padding: 0.5rem 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 1.5rem;
+  cursor: pointer;
+}
+.googleIcon {
+  box-shadow: 0 0 4rem 1.5rem rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+  padding: 0.6rem;
+  border: 0.1rem solid #339af0;
+}
