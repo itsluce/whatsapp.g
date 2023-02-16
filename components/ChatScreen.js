@@ -8,7 +8,7 @@ import MoreVertIcon from "@mui/icons-material/MoreVert";
 import AttachFileIcon from "@mui/icons-material/AttachFile";
 import InsertEmoticonIcon from "@mui/icons-material/InsertEmoticon";
 import MicIcon from "@mui/icons-material/Mic";
-// import EmojiPicker from "emoji-picker-react";
+import EmojiPicker from "emoji-picker-react";
 import { AiOutlineSend } from "react-icons/ai";
 
 import {
@@ -138,6 +138,9 @@ function Chatscreen({ chat, messages }) {
           onChange={(e) => setInput(e.target.value)}
           placeholder="Type a message"
         />
+        <button hidden disabled={!input} type="submit" onClick={sendMessage}>
+          Send Message
+        </button>
         {/* <EmojiPicker onEmojiClick={input} /> */}
         {input ? (
           <IconButton>
